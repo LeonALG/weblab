@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <script>
+        function ClickFunction () {
+            var val = document.getElementById("name").value;
+                mail = document.getElementById("email").value;
+            alert (val + " (" + mail +"), Ваше сообщение успешно отправлено!");
+        }
+
+        function myMap() {
+        var mapOptions = {
+        center: new google.maps.LatLng(54.182759, 37.603972),
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.HYBRID}
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+     <style>
+
+        h1 
+        {font-family:Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        a 
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+
+    </style>
+    </head>
+    <body>
+    <h1>Меню</h1>
+        <hr color = "green">
+        <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cont.html">Контакты</a></li></ul>
+        <hr color = "green">
+
+        <h1>Свяжитесь с нами</h1>
+
+    <form action="registration.php">
+        <p><label for="name">Имя</label>
+        <input type="name" id="name"></p>
+
+        <p><label for="email">E-mail</label>
+        <input type="email" id="email"></p>
+
+        <p><label for="topic">Тема</label>
+        <input type="topic" id="topic"></p>
+
+        <p><label for="text">Текст сообщения</label><Br>
+        <textarea name="text" cols="40" rows="6"></textarea></p>
+
+    </p>
+    </form>
+    <p><button onclick="ClickFunction()">Отправить</button></p>
+
+</body>
+    <hr color = "blue">
+    <h1>Наш адрес</h1>
+    <p>Телефон: <a href="tel:+7(4872)33-11-37">+7(4872)33-11-37</a></p>
+    <p>Эл.почта: <a href="mailto:cool.gapa@yandex.ru">cool.gapa@yandex.ru</a></p>
+    <p>Адрес: г.Тула, пр.Ленина, 56</p>
+    <div id="map" style="width:400px;height:400px"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"> </script>
+    <footer>
+        <hr color = "blue">
+        <p>&copy ALG, Все права защищены</p>
+    </footer>
+</html>
